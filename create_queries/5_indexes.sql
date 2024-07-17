@@ -1,8 +1,8 @@
 /* 
-Most tables use ID's as primary keys, which are indexed by default.
+All tables use ID's as primary keys, which are indexed by default.
 I just decided to add some indexes for columns that in my opinion might
 be used more often separately. Yet, depends on usage.
-Of course, creating them al ltogether is not a good idea, right? :)
+Of course, creating them all together is not a good idea, right? :)
 */
 
 -- Index on Artist's name
