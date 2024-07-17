@@ -1,4 +1,3 @@
--- Active: 1721234138942@@127.0.0.1@5432@gagikalaverdyan@public
 -- Mac Miller
 INSERT INTO Artists (name, country) VALUES
 ('Mac Miller', 'United States');
