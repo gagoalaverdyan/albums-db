@@ -1,7 +1,10 @@
 SELECT
-    title AS album_title,
-    YEAR(release_date) AS release_year
+    YEAR(Albums.releaseDate),
+    Albums.albumId,
+    Albums.title,
+    Albums.releaseDate
 FROM
     Albums
 ORDER BY
-    release_year;
+    YEAR(Albums.releaseDate),
+    Albums.releaseDate;

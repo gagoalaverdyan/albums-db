@@ -1,34 +1,46 @@
 CREATE TABLE Artists (
-    artist_id INT PRIMARY KEY IDENTITY(1,1),
+    artistId INT PRIMARY KEY IDENTITY(1,1),
     name NVARCHAR(255) NOT NULL,
     country NVARCHAR(100)
 );
 
 CREATE TABLE Albums (
-    album_id INT PRIMARY KEY IDENTITY(1,1),
+    albumId INT PRIMARY KEY IDENTITY(1,1),
     title NVARCHAR(255) NOT NULL,
-    release_date DATE,
-    artist_id INT,
-    FOREIGN KEY (artist_id) REFERENCES Artists (artist_id)
+    releaseDate DATE
 );
 
 CREATE TABLE Songs (
-    song_id INT PRIMARY KEY IDENTITY(1,1),
+    songId INT PRIMARY KEY IDENTITY(1,1),
     title NVARCHAR(255) NOT NULL,
-    track_number INT NOT NULL,
-    album_id INT,
-    FOREIGN KEY (album_id) REFERENCES Albums (album_id)
+    trackNumber INT NOT NULL
 );
 
 CREATE TABLE Genres (
-    genre_id INT PRIMARY KEY IDENTITY(1,1),
+    genreId INT PRIMARY KEY IDENTITY(1,1),
     name VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE AlbumGenres (
-    album_id INT,
-    genre_id INT,
-    PRIMARY KEY (album_id, genre_id),
-    FOREIGN KEY (album_id) REFERENCES Albums (album_id),
-    FOREIGN KEY (genre_id) REFERENCES Genres (genre_id)
+    albumId INT,
+    genreId INT,
+    PRIMARY KEY (albumId, genreId),
+    FOREIGN KEY (albumId) REFERENCES Albums (albumId),
+    FOREIGN KEY (genreId) REFERENCES Genres (genreId)
+);
+
+CREATE TABLE AlbumArtists (
+    albumId INT,
+    artistId INT,
+    PRIMARY KEY (albumId, artistId),
+    FOREIGN KEY (albumId) REFERENCES Albums (albumId),
+    FOREIGN KEY (artistId) REFERENCES Artists (artistId)
+);
+
+CREATE TABLE AlbumSongs (
+    albumId INT,
+    songId INT,
+    PRIMARY KEY (albumId, songId),
+    FOREIGN KEY (albumId) REFERENCES Albums (albumId),
+    FOREIGN KEY (songId) REFERENCES Songs (songId)
 );

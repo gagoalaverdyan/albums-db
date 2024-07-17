@@ -1,10 +1,14 @@
-SELECT
+SELECT 
+    Albums.albumId,
     Albums.title,
+    Albums.releaseDate,
+    Artists.artistId,
     Artists.name,
-    Albums.release_date
+    Artists.country
 FROM
     Albums
-    LEFT JOIN Artists
-    ON Albums.artist_id = Artists.artist_id
+    JOIN AlbumArtists ON Albums.albumId = AlbumArtists.albumId
+    JOIN Artists ON AlbumArtists.artistId = Artists.artistId
 ORDER BY
-    Albums.title;
+    Artists.name,
+    Albums.releaseDate;

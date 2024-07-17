@@ -1,11 +1,13 @@
 SELECT
-    Genres.name AS genre_name,
-    COUNT(AlbumGenres.album_id) AS album_count
-FROM
-    Genres
-    LEFT JOIN AlbumGenres
-    ON Genres.genre_id = AlbumGenres.genre_id
-GROUP BY
+    Albums.albumId,
+    Albums.title,
+    Albums.releaseDate,
+    Genres.genreId,
     Genres.name
+FROM
+    Albums
+    JOIN AlbumGenres ON Albums.albumId = AlbumGenres.albumId
+    JOIN Genres ON AlbumGenres.genreId = Genres.genreId
 ORDER BY
-    album_count DESC;
+    Genres.name,
+    Albums.releaseDate;

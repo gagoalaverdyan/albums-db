@@ -1,11 +1,12 @@
-SELECT 
-    a.title AS album_title,
-    COUNT(s.song_id) AS song_count
+SELECT
+    Albums.albumId,
+    Albums.title,
+    Songs.songId,
+    Songs.title,
+    Songs.trackNumber
 FROM
-    Albums a
-    LEFT JOIN Songs s
-    ON a.album_id = s.album_id
-GROUP BY
-    a.title
+    Albums
+    JOIN AlbumSongs ON Albums.albumId = AlbumSongs.albumId
+    JOIN Songs ON AlbumSongs.songId = Songs.songId
 ORDER BY
-    song_count DESC;
+    Albums.albumId, Songs.trackNumber;

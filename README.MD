@@ -9,7 +9,7 @@ Queries are separated by folders.
 
 ## Database Diagram
 Full diagram hosted and [available here](https://dbdiagram.io/d/6698141b8b4bb5230e9f71c8).
-![DB Diagram](https://i.imgur.com/RsEfmvH.png)
+![DB Diagram](https://i.imgur.com/tsuE20T.png)
 
 ## Indexes
 
