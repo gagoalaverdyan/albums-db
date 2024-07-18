@@ -1,3 +1,6 @@
+-- List artist countries, genres and matching album counts,
+-- ordered by countries and album counts (descending).
+
 SELECT
     Artists.country AS artistCountry,
     Genres.name AS genre,
