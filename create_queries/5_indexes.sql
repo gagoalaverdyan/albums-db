@@ -5,18 +5,19 @@ be used more often separately. Yet, depends on usage.
 Of course, creating them all together is not a good idea, right? :)
 */
 
--- Index on Artist's name
-CREATE INDEX idx_name ON Artists (name);
+-- Index on Artist's country
+CREATE INDEX idx_artists_country ON Artists (country);
 
--- Index on Album's artist_id
-CREATE INDEX idx_artist_id ON Albums (artist_id);
+-- Index on Album's relase date
+CREATE INDEX idx_albums_releaseDate ON Albums(releaseDate);
 
 -- Index on Genres' name
 CREATE INDEX idx_genre_name ON Genres (name);
 
 -- Index on both columns in AlbumGenres, since
 -- they might get used together frequently a lot.
-CREATE INDEX idx_album_genre ON AlbumGenres (album_id, genre_id);
+CREATE INDEX idx_albumGenres_albumId ON AlbumGenres (albumId);
+CREATE INDEX idx_albumGenres_genreId ON AlbumGenres (genreId);
 
--- Index on Songs' album_id
-CREATE INDEX idx_album_id ON Songs (album_id);
+-- Index on Songs' track number
+CREATE INDEX idx_songs_trackNumber ON Songs (trackNumber);
