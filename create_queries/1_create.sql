@@ -25,22 +25,22 @@ CREATE TABLE AlbumGenres (
     albumId INT,
     genreId INT,
     PRIMARY KEY (albumId, genreId),
-    FOREIGN KEY (albumId) REFERENCES Albums (albumId),
-    FOREIGN KEY (genreId) REFERENCES Genres (genreId)
+    FOREIGN KEY (albumId) REFERENCES Albums (albumId) ON DELETE CASCADE,
+    FOREIGN KEY (genreId) REFERENCES Genres (genreId) ON DELETE CASCADE
 );
 
 CREATE TABLE AlbumArtists (
     albumId INT,
     artistId INT,
     PRIMARY KEY (albumId, artistId),
-    FOREIGN KEY (albumId) REFERENCES Albums (albumId),
-    FOREIGN KEY (artistId) REFERENCES Artists (artistId)
+    FOREIGN KEY (albumId) REFERENCES Albums (albumId) ON DELETE CASCADE,
+    FOREIGN KEY (artistId) REFERENCES Artists (artistId) ON DELETE CASCADE
 );
 
 CREATE TABLE AlbumSongs (
     albumId INT,
     songId INT,
     PRIMARY KEY (albumId, songId),
-    FOREIGN KEY (albumId) REFERENCES Albums (albumId),
-    FOREIGN KEY (songId) REFERENCES Songs (songId)
+    FOREIGN KEY (albumId) REFERENCES Albums (albumId) ON DELETE CASCADE,
+    FOREIGN KEY (songId) REFERENCES Songs (songId) ON DELETE CASCADE
 );
