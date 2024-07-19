@@ -1,7 +1,6 @@
 CREATE TABLE Artists (
     artistId INT PRIMARY KEY IDENTITY(1,1),
     name NVARCHAR(255) NOT NULL,
-    country NVARCHAR(100)
 );
 
 CREATE TABLE Albums (
@@ -43,4 +42,12 @@ CREATE TABLE AlbumSongs (
     PRIMARY KEY (albumId, songId),
     FOREIGN KEY (albumId) REFERENCES Albums (albumId) ON DELETE CASCADE,
     FOREIGN KEY (songId) REFERENCES Songs (songId) ON DELETE CASCADE
+);
+
+CREATE TABLE ArtistBios (
+    artistId INT PRIMARY KEY,
+    bio NVARCHAR(255),
+    country NVARCHAR(100),
+    instagram NVARCHAR(128),
+    FOREIGN KEY (artistId) REFERENCES Artists (artistId) ON DELETE CASCADE
 );

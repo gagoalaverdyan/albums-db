@@ -1,6 +1,6 @@
 -- Inserting artist Mac Miller
-INSERT INTO Artists (name, country) VALUES
-('Mac Miller', 'United States');
+INSERT INTO Artists (name) VALUES
+('Mac Miller');
 
 -- Inserting albums for Mac Miller
 INSERT INTO Albums (title, releaseDate) VALUES
@@ -25,3 +25,11 @@ INSERT INTO Genres (name) VALUES
 ('Hip Hop'),
 ('Rap'),
 ('Jazz Rap');
+
+-- Inserting Mac Miller's bio
+INSERT INTO ArtistBios (artistId, bio, country, instagram) VALUES
+(1,
+'Mac Miller was an American rapper, singer-songwriter, and record producer.
+Miller began his career in Pittsburghs local hip hop scene in 2007.',
+'United States',
+'@MacMiller');

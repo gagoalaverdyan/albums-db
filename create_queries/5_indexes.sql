@@ -5,8 +5,8 @@ be used more often separately. Yet, depends on usage.
 Of course, creating them all together is not a good idea, right? :)
 */
 
--- Index on Artist's country
-CREATE INDEX idx_artists_country ON Artists (country);
+-- Index on ArtistBios's country
+CREATE INDEX idx_artists_country ON ArtistBios (country);
 
 -- Index on Album's relase date
 CREATE INDEX idx_albums_releaseDate ON Albums(releaseDate);
