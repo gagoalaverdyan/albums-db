@@ -29,7 +29,6 @@ INSERT INTO Genres (name) VALUES
 -- Inserting Mac Miller's bio
 INSERT INTO ArtistBios (artistId, bio, country, instagram) VALUES
 (1,
-'Mac Miller was an American rapper, singer-songwriter, and record producer.
-Miller began his career in Pittsburghs local hip hop scene in 2007.',
+'Mac Miller was an American rapper, singer-songwriter, and record producer. Miller began his career in Pittsburgh''s local hip hop scene in 2007.',
 'United States',
 '@MacMiller');

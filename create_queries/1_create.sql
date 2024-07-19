@@ -14,7 +14,9 @@ CREATE TABLE Albums (
 CREATE TABLE Songs (
     songId INT PRIMARY KEY IDENTITY(1,1),
     title NVARCHAR(255) NOT NULL,
-    trackNumber INT NOT NULL
+    trackNumber INT NOT NULL,
+    streams INT NOT NULL,
+    isClassic BIT DEFAULT 0
 );
 
 CREATE TABLE Genres (

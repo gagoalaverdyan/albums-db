@@ -7,12 +7,12 @@ Queries are separated by folders.
 ```display_queries``` includes some sample queries to visualize the data.
 
 ## Recent changes
-✅ Artist Bios (One-to-one)
-✅ Playlists
+✅ Classics attribute  
+✅ Playlists  
+✅ Artist Bios (One-to-one)  
 
 ## Current TODO list
 * Users model
-* Classics attribute
 * Model Constraints
 
 P.S. Due to the multiple ideas, the diagram might be outdated, but will be updated once major changes are implemented.

@@ -22,5 +22,3 @@ INSERT INTO AlbumGenres (albumId, genreId) VALUES
 -- Circles is a Jazz Rap and Hip-Hop album
 INSERT INTO AlbumGenres (albumId, genreId) VALUES
 (6,1), (6, 3);
-
-SELECT * FROM AlbumGenres;

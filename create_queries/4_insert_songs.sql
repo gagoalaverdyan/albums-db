@@ -1,14 +1,15 @@
 -- Sorry, I am inserting only first five songs from every album.
 -- Otherwise, it would take too long :)
+-- Every song has a rangom streams count between 100 and 300 million.
 
 -- Mac Miller albums
 -- Blue Slide Park
-INSERT INTO Songs (title, trackNumber) VALUES
-('English Lane', 1),
-('Blue Slide Park', 2),
-('Party on Fifth Ave.', 3),
-('PA Nights', 4),
-('Frick Park Market', 5);
+INSERT INTO Songs (title, trackNumber, streams) VALUES
+('English Lane', 1, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Blue Slide Park', 2, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Party on Fifth Ave.', 3, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('PA Nights', 4, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Frick Park Market', 5, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000);
 
 INSERT INTO AlbumSongs (albumId, songId) VALUES
 (1, 1),
@@ -18,12 +19,12 @@ INSERT INTO AlbumSongs (albumId, songId) VALUES
 (1, 5);
 
 -- Watching Movies with the Sound Off
-INSERT INTO Songs (title, trackNumber) VALUES
-('The Star Room', 1),
-('Avian', 2),
-('Im Not Real', 3),
-('S.D.S.', 4),
-('Bird Call', 5);
+INSERT INTO Songs (title, trackNumber, streams) VALUES
+('The Star Room', 1, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Avian', 2, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Im Not Real', 3, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('S.D.S.', 4, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Bird Call', 5, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000);
 
 INSERT INTO AlbumSongs (albumId, songId) VALUES
 (2, 6),
@@ -33,12 +34,12 @@ INSERT INTO AlbumSongs (albumId, songId) VALUES
 (2, 10);
 
 -- GO:OD AM
-INSERT INTO Songs (title, trackNumber) VALUES
-('Doors', 1),
-('Brand Name', 2),
-('Rush Hour', 3),
-('Two Matches', 4),
-('100 Grandkids', 5);
+INSERT INTO Songs (title, trackNumber, streams) VALUES
+('Doors', 1, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Brand Name', 2, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Rush Hour', 3, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Two Matches', 4, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('100 Grandkids', 5, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000);
 
 INSERT INTO AlbumSongs (albumId, songId) VALUES
 (3, 11),
@@ -48,12 +49,12 @@ INSERT INTO AlbumSongs (albumId, songId) VALUES
 (3, 15);
 
 -- The Divine Feminine
-INSERT INTO Songs (title, trackNumber) VALUES
-('Congratulations', 1),
-('Dang!', 2),
-('Stay', 3),
-('Skin', 4),
-('Cinderella', 5);
+INSERT INTO Songs (title, trackNumber, streams) VALUES
+('Congratulations', 1, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Dang!', 2, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Stay', 3, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Skin', 4, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Cinderella', 5, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000);
 
 INSERT INTO AlbumSongs (albumId, songId) VALUES
 (4, 16),
@@ -63,12 +64,12 @@ INSERT INTO AlbumSongs (albumId, songId) VALUES
 (4, 20);
 
 -- Swimming
-INSERT INTO Songs (title, trackNumber) VALUES
-('Come Back to Earth', 1),
-('Hurt Feelings', 2),
-('Whats the Use?', 3),
-('Perfecto', 4),
-('Self Care', 5);
+INSERT INTO Songs (title, trackNumber, streams) VALUES
+('Come Back to Earth', 1, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Hurt Feelings', 2, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Whats the Use?', 3, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Perfecto', 4, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Self Care', 5, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000);
 
 INSERT INTO AlbumSongs (albumId, songId) VALUES
 (5, 21),
@@ -78,12 +79,12 @@ INSERT INTO AlbumSongs (albumId, songId) VALUES
 (5, 25);
 
 -- Circles
-INSERT INTO Songs (title, trackNumber) VALUES
-('Circles', 1),
-('Complicated', 2),
-('Blue World', 3),
-('Good News', 4),
-('I Can See', 5);
+INSERT INTO Songs (title, trackNumber, streams) VALUES
+('Circles', 1, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Complicated', 2, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Blue World', 3, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('Good News', 4, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000),
+('I Can See', 5, ABS(CHECKSUM(NEWID())) % 200000000 + 100000000);
 
 INSERT INTO AlbumSongs (albumId, songId) VALUES
 (6, 26),
