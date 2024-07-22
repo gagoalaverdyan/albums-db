@@ -19,7 +19,7 @@ P.S. Due to the multiple ideas, the diagram might be outdated, but will be updat
 
 ## Database Diagram
 Full diagram hosted and [available here](https://dbdiagram.io/d/6698141b8b4bb5230e9f71c8).
-![DB Diagram](https://i.imgur.com/tsuE20T.png)
+![DB Diagram](https://i.imgur.com/rjGFuFy.png)
 
 ## Indexes
 

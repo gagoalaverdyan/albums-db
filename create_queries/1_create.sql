@@ -2,7 +2,7 @@
 
 CREATE TABLE Artists (
     artistId INT PRIMARY KEY IDENTITY(1,1),
-    name NVARCHAR(255) NOT NULL,
+    name NVARCHAR(255) NOT NULL
 );
 
 CREATE TABLE Albums (
