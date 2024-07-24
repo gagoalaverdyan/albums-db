@@ -7,19 +7,18 @@ AS
 BEGIN
     IF NOT EXISTS (
         SELECT
-        1
-    FROM
-        PlaylistSongs
-    WHERE
+            1
+        FROM
+            PlaylistSongs
+        WHERE
             playlistId = @playlistId AND songId = @songId
     )
         BEGIN
-        INSERT INTO
-                PlaylistSongs
-            (playlistId, songId, addedDate)
-        VALUES
-            (@playlistId, @songId, GETDATE());
-    END
+            INSERT INTO
+                PlaylistSongs (playlistId, songId, addedDate)
+            VALUES
+                (@playlistId, @songId, GETDATE());
+        END
     ELSE
         BEGIN
         SELECT 'Song is already in the playlist';

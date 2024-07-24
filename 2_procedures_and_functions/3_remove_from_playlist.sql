@@ -7,19 +7,19 @@ AS
 BEGIN
     IF EXISTS (
         SELECT
-        1
-    FROM
-        PlaylistSongs
-    WHERE
+            1
+        FROM
+            PlaylistSongs
+        WHERE
             playlistId = @playlistId AND songId = @songId
     )
         BEGIN
-        DELETE FROM
+            DELETE FROM
                 PlaylistSongs
             WHERE
                 playlistId = @playlistId
-            AND songId = @songId;
-    END
+                AND songId = @songId;
+        END
     ELSE
         BEGIN
         SELECT 'Song is not in the playlist';
