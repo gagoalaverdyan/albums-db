@@ -38,6 +38,11 @@ CREATE TABLE Bios (
     instagram NVARCHAR(255)
 );
 
+CREATE TABLE Users (
+    userId INT PRIMARY KEY IDENTITY(1, 1),
+    username NVARCHAR(128) NOT NULL UNIQUE,
+    email NVARCHAR(128) NOT NULL UNIQUE,
+);
 
 -- Relationship Tables
 
@@ -80,4 +85,12 @@ CREATE TABLE PlaylistSongs (
     PRIMARY KEY (playlistId, songId),
     FOREIGN KEY (playlistId) REFERENCES Playlists (playlistId) ON DELETE CASCADE,
     FOREIGN KEY (songId) REFERENCES Songs (songId) ON DELETE CASCADE
+);
+
+CREATE TABLE UserPlaylists (
+    userId INT,
+    playlistId INT,
+    PRIMARY KEY (userId, playlistId),
+    FOREIGN KEY (userId) REFERENCES Users (userId) ON DELETE CASCADE,
+    FOREIGN KEY (playlistId) REFERENCES Playlists (playlistId) ON DELETE CASCADE
 );
