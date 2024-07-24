@@ -13,3 +13,13 @@ INSERT INTO PlaylistSongs (playlistId, songId) VALUES
 (1, 21),
 (1, 24), 
 (1, 27);
+
+-- Adding songs using stored procedure
+EXEC addToPlaylist 1, 1;
+EXEC addToPlaylist 1, 4;
+EXEC addToPlaylist 1, 11;
+EXEC addToPlaylist 1, 19;
+
+-- Creating a playlist using stored procedure
+DECLARE @result NVARCHAR(255);
+EXEC createPlaylist 'Acoustic', 'Stripped- songs', @result OUTPUT;

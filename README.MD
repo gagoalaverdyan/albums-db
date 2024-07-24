@@ -13,7 +13,9 @@ Queries are separated by folders.
 
 ## Current TODO list
 * Users model
-* Model Constraints
+* Stored procedures
+* Functions
+* Listening history
 
 P.S. Due to the multiple ideas, the diagram might be outdated, but will be updated once major changes are implemented.
 
