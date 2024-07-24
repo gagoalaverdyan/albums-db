@@ -34,5 +34,3 @@ INSERT INTO Users (username, email) VALUES
 INSERT INTO UserPlaylists (userId, playlistId) VALUES
 (1, 1),
 (2, 2);
-
-SELECT * FROM UserPlaylists;

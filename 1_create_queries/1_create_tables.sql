@@ -41,7 +41,7 @@ CREATE TABLE Bios (
 CREATE TABLE Users (
     userId INT PRIMARY KEY IDENTITY(1, 1),
     username NVARCHAR(128) NOT NULL UNIQUE,
-    email NVARCHAR(128) NOT NULL UNIQUE,
+    email NVARCHAR(128) NOT NULL UNIQUE
 );
 
 -- Relationship Tables
@@ -93,4 +93,13 @@ CREATE TABLE UserPlaylists (
     PRIMARY KEY (userId, playlistId),
     FOREIGN KEY (userId) REFERENCES Users (userId) ON DELETE CASCADE,
     FOREIGN KEY (playlistId) REFERENCES Playlists (playlistId) ON DELETE CASCADE
+);
+
+CREATE TABLE ListeningHistory(
+    historyId INT PRIMARY KEY IDENTITY (1, 1),
+    userId INT,
+    songId INT,
+    listenedTime DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (userId) REFERENCES Users (userId) ON DELETE CASCADE,
+    FOREIGN KEY (songId) REFERENCES Songs (songId) ON DELETE CASCADE
 );
