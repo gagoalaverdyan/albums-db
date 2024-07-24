@@ -31,6 +31,13 @@ CREATE TABLE Playlists (
     createdDate DATETIME DEFAULT GETDATE()
 );
 
+CREATE TABLE Bios (
+    bioId INT PRIMARY KEY IDENTITY(1, 1),
+    bio NVARCHAR(255),
+    country NVARCHAR(255),
+    instagram NVARCHAR(255)
+);
+
 
 -- Relationship Tables
 
@@ -59,11 +66,11 @@ CREATE TABLE AlbumSongs (
 );
 
 CREATE TABLE ArtistBios (
-    artistId INT PRIMARY KEY,
-    bio NVARCHAR(255),
-    country NVARCHAR(100),
-    instagram NVARCHAR(128),
-    FOREIGN KEY (artistId) REFERENCES Artists (artistId) ON DELETE CASCADE
+    artistId INT,
+    bioId INT,
+    PRIMARY KEY (artistId, bioId),
+    FOREIGN KEY (artistId) REFERENCES Artists (artistId) ON DELETE CASCADE,
+    FOREIGN KEY (bioId) REFERENCES Bios (bioId) ON DELETE CASCADE
 );
 
 CREATE TABLE PlaylistSongs (

@@ -3,9 +3,10 @@
 SELECT
     Artists.artistId,
     Artists.name,
-    ArtistBios.country,
-    ArtistBios.bio,
-    ArtistBios.instagram
+    Bios.bio,
+    Bios.country,
+    Bios.instagram
 FROM
     Artists
-    LEFT JOIN ArtistBios ON ArtistBios.artistId = ArtistBios.artistId;
+    LEFT JOIN ArtistBios ON ArtistBios.artistId = ArtistBios.artistId
+    LEFT JOIN Bios ON Bios.bioId = ArtistBios.bioId;

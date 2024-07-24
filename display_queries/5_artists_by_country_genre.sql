@@ -2,7 +2,7 @@
 -- ordered by countries and album counts (descending).
 
 SELECT
-    ArtistBios.country AS artistCountry,
+    Bios.country AS artistCountry,
     Genres.name AS genre,
     COUNT(*) AS albumCount
 FROM
@@ -12,8 +12,9 @@ FROM
     JOIN AlbumGenres ON Albums.albumId = AlbumGenres.albumId
     JOIN Genres ON AlbumGenres.genreId = Genres.genreId
     JOIN ArtistBios ON ArtistBios.artistId = Artists.artistId
+    JOIN Bios ON Bios.bioId = ArtistBios.bioId
 GROUP BY
-    ArtistBios.country, Genres.name
+    Bios.country, Genres.name
 ORDER BY
     artistCountry,
     albumCount DESC;
