@@ -2,7 +2,7 @@
 
 A music library database, inspired by Spotify's music catalog.
 
-Queries are separated by folders.
+Queries are separated by folders.  
 ```1_create_queries``` includes all the queries required to create the tables, insert Mac Miller's discography as an example,  
 ```2_procedures_and_functions``` includes procedures and functions to manage the database easier,  
 ```3_triggers``` includes triggers to add logic to the database,  
